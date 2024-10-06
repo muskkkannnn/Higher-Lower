@@ -16,11 +16,12 @@ def comparison():
     compare_2 = random.choice(data)
     print(f"Against B: {compare_2['name']}, a {compare_2['description']}, from {compare_2['country']}.")
 
+    # Input answer from user
     user_choice = input("Who has more followers? Type 'A' or 'B': ").upper()
     
-    return compare_1, compare_2
+    return compare_1, compare_2, user_choice
 
-compare_1, compare_2 = comparison() 
+compare_1, compare_2, user_choice = comparison() 
 
 # Input answer from user
 # user_choice = input("Who has more followers? Type 'A' or 'B': ").upper()
@@ -35,16 +36,22 @@ elif user_choice == "B":
 # else:
 #     print("NO such choice.")
 
+game_continue = True
 score = 0
 
-if user_choice['follower_count'] > other_choice['follower_count']:
-    score += 1
-    print(f"You're Right! Current Score: {score}\n")
+while game_continue == True:
+    if user_choice['follower_count'] > other_choice['follower_count']:
+        score += 1
+        print(f"You're Right! Current Score: {score}\n")
+        compare_1 = compare_2
+    else:
+        game_continue == False
+        # print(f"Sorry, That's Wrong. Final Score: {score}")
 
-    compare_1 = compare_2
+    # compare_1 = compare_2
     comparison()
-else:
-    print(f"Sorry, That's Wrong. Final Score: {score}")
+
+print(f"Sorry, That's Wrong. Final Score: {score}")
 
 # Track Score (+1) for right answer. 
 # Display Score when Game Over.    
