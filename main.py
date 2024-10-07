@@ -44,12 +44,13 @@ while game_continue == True:
         score += 1
         print(f"You're Right! Current Score: {score}\n")
         compare_1 = compare_2
+        comparison()
     else:
-        game_continue == False
+        game_continue = False
         # print(f"Sorry, That's Wrong. Final Score: {score}")
 
     # compare_1 = compare_2
-    comparison()
+    # comparison()
 
 print(f"Sorry, That's Wrong. Final Score: {score}")
 
