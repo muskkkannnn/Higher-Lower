@@ -13,7 +13,7 @@ def comparison(compare_1):
 
     # Input answer from user
     user_choice = input("Who has more followers? Type 'A' or 'B': ").upper()
-
+-
     return compare_2, user_choice
 
 compare_1 = random.choice(data)
