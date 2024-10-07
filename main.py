@@ -3,7 +3,7 @@ from art import logo, vs
 import random
 print(logo)
 
-# Choose 2 random objects from data and Print both the statements.
+# Choose 2 random objects from the data and Print both the statements.
 def comparison(compare_1):
     print(f"Compare A: {compare_1['name']}, a {compare_1['description']}, from {compare_1['country']}.")
     print(vs)                                                       # Insert 'vs.' ASCII art in between.
@@ -46,3 +46,4 @@ while game_continue:
 
         # Track Score (+1) for right answer. 
         # Display Score when Game Over.    
+        
